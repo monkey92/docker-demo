@@ -13,9 +13,9 @@ docker run --name my-nginx -d -p 80:80 \
 	sodisnai/php-dev:3 \
 	/usr/sbin/nginx -g 'daemon off;'
 
-docker run --name my-nginx -d -p 80:80 \
+docker run --name my-nginx -d -p 80:8090 \
        	-v /home/ddc/ws/docker-demo/app:/ddc-app \
-	sodisnai/demo:3.0
+	sodisnai/demo:6.0
 
 
 

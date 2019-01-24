@@ -4,6 +4,11 @@ FROM sodisnai/php-dev:3
 
 MAINTAINER ddc 2223445830@qq.com
 
+
+# 创建一个用户 用来执行 php-fpm  与 nginx
+RUN ["groupadd", "-g", "1000", "ddc-docker-group"]
+RUN ["useradd", "-u", "1000", "ddc-docker"]
+
 # php-fpm 配置文件
 COPY ./php.ini /usr/local/php56/etc/php.ini
 COPY ./php-fpm.conf /usr/local/php56/etc/php-fpm.conf
